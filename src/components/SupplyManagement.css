@@ -1,0 +1,144 @@
+/* General Styles */
+.supply-management-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c4965c4, #1b464dc7); /* Gradient similar to GeoLocationMonitoring */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out; /* Smooth fade-in animation */
+  height: fit-content;
+  border-radius: 40px;
+}
+
+/* Image Styling */
+.supply-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Smooth shadow effect */
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 2.5rem;
+  color: white; /* White to contrast the gradient background */
+  margin-bottom: 40px;
+  text-align: center;
+  word-wrap: break-word;
+  text-transform: uppercase; /* Stylish uppercase letters */
+  letter-spacing: 2px; /* Adds more spacing between characters */
+  animation: fadeInDown 1s ease-in-out; /* Slide-in animation */
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #4ca1af; /* Matching primary color */
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  width: 200px; /* Larger button width */
+  text-align: center;
+  text-transform: uppercase; /* Consistent style */
+}
+
+/* Add Items Button - Blue Shade */
+.add-items-btn {
+  background: linear-gradient(135deg, #4169e1, #3b5998);
+}
+
+/* Transfer Items Button - Orange Shade */
+.transfer-items-btn {
+  background: linear-gradient(135deg, #d3830b, #a0522d);
+}
+
+/* Hover Effect for All Buttons */
+.btn:hover {
+  transform: scale(1.1); /* Button pops on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Dynamic shadow */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .supply-image {
+    width: 200px; /* Smaller image on tablets */
+    height: 200px;
+  }
+
+  .heading {
+    font-size: 2rem; /* Smaller heading */
+  }
+
+  .btn {
+    width: 160px; /* Smaller buttons */
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-image {
+    width: 150px; /* Compact image for mobile */
+    height: 150px;
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .btn {
+    width: 140px; /* Compact button size */
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
