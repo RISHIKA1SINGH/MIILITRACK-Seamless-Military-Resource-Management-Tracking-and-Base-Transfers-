@@ -1,0 +1,221 @@
+/* Main Safe Spots Container */
+.safe-spots {
+  background: linear-gradient(to right, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8)); /* Dark gradient with transparency */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 50px auto; /* Centered */
+  position: relative; /* Ensures proper containment */
+  overflow: hidden; /* Prevent content overflow */
+  display: flex; /* Split screen */
+  height: 100vh; /* Full viewport height */
+  width: 1500px; /* Fixed width */
+  margin-top: 80px; /* Offset from top */
+  backdrop-filter: blur(12px); /* Glassmorphism effect */
+}
+
+/* Headings */
+.safe-spots h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #93c5fd; /* Light Blue */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.safe-spots h3 {
+  font-size: 29px;
+  color: #60a5fa; /* Sky Blue */
+  margin-bottom: 10px;
+}
+
+/* List Styles */
+.safe-spots ul {
+  list-style: none;
+  padding: 0;
+}
+
+.safe-spots ul li {
+  background-color: rgba(237, 237, 237, 0.8); /* Light gray with transparency */
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+}
+
+/* List Item Hover Effect */
+.safe-spots ul li:hover {
+  background: rgba(100, 116, 139, 0.9); /* Slightly lighter shade on hover */
+  transform: scale(1.03); /* Zoom effect */
+}
+
+/* Form Fields */
+.safe-spots .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.safe-spots label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #93c5fd; /* Light Blue */
+}
+
+.safe-spots input,
+.safe-spots select {
+  padding: 10px;
+  border: none; /* Cleaner design */
+  border-radius: 8px;
+  background: rgba(51, 65, 85, 0.8); /* Dark input background with transparency */
+  color: #f8fafc; /* Light input text */
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Input Hover Effect */
+.safe-spots input:focus,
+.safe-spots select:focus {
+  outline: none;
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* Button Styles */
+.safe-spots button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add Button */
+.add-spot-button {
+  background: #4f46e5; /* Purple */
+  color: #fff;
+  margin-top: 8px;
+}
+
+.add-spot-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.5);
+}
+
+/* Remove Button */
+.remove-button {
+  background: #ef4444; /* Red */
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #7a2a2a; /* Darker Red */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.5);
+}
+
+/* Add Connection Button */
+.add-connection-button {
+  background: #22c55e; /* Green */
+  color: white;
+}
+
+.add-connection-button:hover {
+  background: #15803d; /* Dark Green */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(34, 197, 94, 0.5);
+}
+
+/* Left, Middle, Right Sections */
+.left-section,
+.middle-section,
+.right-section {
+  padding: 2px;
+  box-sizing: border-box; /* Ensure padding is included */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+  animation: fadeIn 0.6s ease-out; /* Fade-in effect */
+}
+
+/* Left Section: Safe Spots List */
+.left-section {
+  flex: 1; /* Equal width */
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 5px solid black; 
+  box-shadow: 4px 0 8px rgba(79, 70, 229, 0.3);
+  max-width: 800px;
+}
+
+/* Middle Section: Add/Remove Form */
+.middle-section {
+  flex: 2; /* Wider */
+  max-width: 320px; /* Restrict width */
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 5px solid #000000;
+  box-shadow: 4px 0 8px rgba(79, 70, 229, 0.3);
+}
+
+/* Right Section: Connections */
+.right-section {
+  flex: 1; /* Equal width */
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: -4px 0 8px rgba(79, 70, 229, 0.3);
+}
+.add-safe-spot-spacing ,select{
+  margin-bottom: 10px;
+  color: white;
+}
+
+.add-safe-spot-spacing::placeholder{
+  color: rgba(255, 255, 255, 0.955); /* White Text */
+}
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .safe-spots {
+    flex-direction: column; /* Stack vertically */
+    padding: 10px;
+    width: 100%;
+    
+    margin-bottom: 20px;
+  }
+
+  .safe-spots h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  .safe-spots input,
+  .safe-spots select,
+  .safe-spots button {
+    width: 100%; /* Full width */
+  }
+
+  .safe-spots button {
+    margin-top: 5px;
+  }
+  .safe-spots ul li{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Ensure visibility and prevent horizontal scroll */
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
