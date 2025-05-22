@@ -1,0 +1,246 @@
+/* Scoped Styles - Manage Users Page */
+.manage-users-page {
+  /* General Styling */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background (Scoped) */
+.manage-users-page body {
+  background: linear-gradient(135deg, #0f172a, #1e40af); /* Navy Blue Gradient */
+  color: white;
+  animation: fadeIn 1s ease-in-out; /* Page Fade-in Effect */
+}
+
+/* Container */
+.manage-users-page .manage-users-container {
+  max-width: 900px; /* Slightly wider for better layout */
+  margin: 5px auto;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.7); /* Darker Transparent Background */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Stronger Shadow */
+  text-align: center;
+  backdrop-filter: blur(12px); /* Enhanced Frosted Glass Effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Container */
+.manage-users-page .manage-users-container:hover {
+  transform: scale(1.04); /* Slight Zoom Effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Headers */
+.manage-users-page .manage-users-container h2 {
+  color: #fbbf24; /* Warm Yellow */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInFromLeft 1s ease-in-out; /* Slide Animation */
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.manage-users-page .manage-users-container h3 {
+  color: #ffffff; /* Soft Sky Blue */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+/* Form Elements */
+.manage-users-page .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+  animation: fadeIn 1.5s ease-in-out; /* Smooth Fade */
+  width: fit-content;
+  color: white;
+}
+
+.manage-users-page .input-group input,
+.manage-users-page .input-group select {
+  width: 100%;
+  padding: 4px; /* Increased Padding */
+  border: none;
+  border-radius: 10px; /* Larger Corners */
+  font-size: 19px; /* Increased Font Size */
+  background: #1e293b;
+  color: #f8fafc;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  color: white;
+}
+
+/* Input Focus Effect */
+.manage-users-page .input-group input:focus,
+.manage-users-page .input-group select:focus {
+  box-shadow: 0 0 15px #3b82f6; /* Brighter Blue Glow on Focus */
+  background: #0f172a; /* Slightly Darker Background */
+  outline: none;
+  color: white;
+}
+
+/* Buttons */
+.manage-users-page .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Increased Gap */
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+/* General Button Styling */
+.manage-users-page .button-group button {
+  background: #2563eb; /* Bright Blue */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 14px; /* Slightly Larger Font */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.manage-users-page .button-group button:hover {
+  background: #22c55e; /* Vibrant Green */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.6);
+}
+
+/* Remove Button */
+.manage-users-page .button-group .remove-btn {
+  background: #dc2626; /* Strong Red */
+}
+
+.manage-users-page .button-group .remove-btn:hover {
+  background: #b91c1c; /* Darker Red */
+}
+
+/* User List */
+.manage-users-page .user-list {
+  margin-top: 40px;
+  text-align: left;
+  animation: slideInFromRight 1s ease-in-out; /* Slide Animation */
+}
+
+.manage-users-page .user-list ul {
+  list-style: none;
+  padding: 0;
+}
+.input-large::placeholder{
+  color: white; /* White Text */
+  background: #1e293b; /* Dark Background */
+  border: none;
+  padding: 5px;
+  border-radius: 12px;
+  font-size: 20px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.manage-users-page .user-list li {
+  background: rgba(255, 255, 255, 0.2); /* Softer Transparency */
+  padding: 16px; /* Larger Padding */
+  margin: 10px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* List Item Hover Effect */
+.manage-users-page .user-list li:hover {
+  transform: translateX(12px); /* Smooth Slide */
+  background: rgba(255, 255, 255, 0.3); /* Brighter on Hover */
+}
+
+.input-size{
+  font-size: 80px;
+
+}
+.manage-users-page .custom-btn {
+  background: #2563eb; /* Bright Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.manage-users-page .custom-btn:hover {
+  background: #22c55e; /* Vibrant Green */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.6);
+}
+
+.roles-space {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.cr-sp{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manage-users-page .manage-users-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .manage-users-page .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .manage-users-page .user-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
