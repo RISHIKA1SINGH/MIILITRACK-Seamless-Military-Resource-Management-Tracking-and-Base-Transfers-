@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(./bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid rgb(0, 221, 255);
+    text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -5px;
+}
+
+/* Login Button */
+.login-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Forgot Password & Signup Links */
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+.forgotpasswordbutton {
+    backdrop-filter: blur(10px); /* Frosted-glass blur effect */
+    text-align: center;          /* Center the content */
+    max-width: fit-content;      /* Adjust width to content */
+    margin-left: 23px;           /* Position adjustment */
+}
+
+/* Fully Transparent Button */
+.forgotpasswordbutton button {
+    all: unset;                   /* Reset ALL default styles */
+    appearance: none;             /* Remove platform-specific styling */
+    background: transparent !important; /* Force transparency */
+    border: none !important;      /* Force border removal */
+    padding: 0 !important;        /* Remove padding */
+    margin: 0 !important;         /* Remove margin */
+    
+    font-size: 18px;              /* Custom font size */
+    color: #0048ff;               /* Text color */
+    font-weight: bold;            /* Emphasize text */
+    letter-spacing: 1px;          /* Modern appearance */
+    cursor: pointer;              /* Pointer cursor on hover */
+    text-decoration: underline;   /* Optional: Underline for link appearance */
+}
+
+/* Hover Effect */
+.forgotpasswordbutton button:hover {
+    opacity: 0.8; /* Slight fade on hover */
+}
+
+/* Optional: Remove focus outline */
+.forgotpasswordbutton button:focus {
+    outline: none;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
