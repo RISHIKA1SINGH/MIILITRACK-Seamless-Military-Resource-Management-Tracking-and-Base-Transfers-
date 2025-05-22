@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD3En6AlABOAYB5O4Xdlc6ualexyxqipqs",
+  apiKey: "PUT YOUR API KEY",
   authDomain: "military-management-website.firebaseapp.com",
   databaseURL: "https://military-management-website-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "military-management-website",
